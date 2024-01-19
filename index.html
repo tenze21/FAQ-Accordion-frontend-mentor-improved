@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+       /*
+   * Hide the menu during the 'no-js' state
+   * to solve Cumulative Layout Shift.
+   */
+      [data-state='no-js'] .answer{
+        display: none;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <main class="container">
+      <header>
+        <img src="assets/images/icon-star.svg" alt="star icon" class="star-icon"/> <h1>FAQs</h1>
+      </header>
+      <div class="question-1 js-disclosure" data-state="no-js">
+          <button
+          class="disclosure_button js_disclosure_btn"
+          aria-expanded="true"
+          aria-controls="answer-1"
+          disabled
+          title="This button becomes functional once Javascript is active"
+          >
+            <p> What is Frontend Mentor, and how will it help me?</p>
+            <img class="hide" src="assets/images/icon-minus.svg" alt="hide answer" aria-hidden="true"/>
+            <img class="show" src="assets/images/icon-plus.svg" alt="show answer" aria-hidden="true"/>
+          </button>
+
+        <div id="answer-1" class="answer">
+          Frontend Mentor offers realistic coding challenges to help developers
+          improve their frontend coding skills with projects in HTML, CSS, and
+          JavaScript. It's suitable for all levels and ideal for portfolio
+          building.
+        </div>
+      </div>
+      <hr>
+
+      <div class="question-2 js-disclosure" data-state="no-js">
+          <button
+          aria-expanded="false"
+          class="disclosure_button js_disclosure_btn"
+          aria-controls="answer-2"
+          disabled
+          title="This button becomes functional once javascript is active"
+          >
+            <p>Is Frontend Mentor free?</p> 
+            <img class="show" src="assets/images/icon-plus.svg" alt="show answer" aria-hidden="true"/>
+            <img class="hide" src="assets/images/icon-minus.svg" alt="hide answer" aria-hidden="true"/> 
+          </button>
+
+        <div id="answer-2" class="answer">
+          Yes, Frontend Mentor offers both free and premium coding challenges,
+          with the free option providing access to a range of projects suitable
+          for all skill levels.
+        </div>
+      </div>
+      <hr>
+
+      <div class="question-3 js-disclosure" data-state="no-js">
+          <button
+          aria-expanded="false"
+          class="disclosure_button js_disclosure_btn"
+          aria-controls="answer-3"
+          disabled
+          title="This button becomes functional once javascript is active"
+          >
+            <p>Can I use Frontend Mentor projects in my portfolio?</p>
+            <img class="show" src="assets/images/icon-plus.svg" alt="show answer" aria-hidden="true"/>
+            <img class="hide" src="assets/images/icon-minus.svg" alt="hide answer" aria-hidden="true"/></span>
+          </button>
+
+        <div id="answer-3" class="answer">
+          Yes, you can use projects completed on Frontend Mentor in your
+          portfolio. It's an excellent way to showcase your skills to potential
+          employers!
+        </div>
+      </div>
+      <hr>
+
+      <div class="question-4 js-disclosure" data-state="no-js">
+          <button
+          aria-expanded="false"
+          class="disclosure_button js_disclosure_btn"
+          aria-controls="answer-4"
+          disabled
+          title="This button becomes functional once javascript is active"
+          >
+            <p>How can I get help if I'm stuck on a Frontend Mentor challenge?</p> 
+            <img class="show" src="assets/images/icon-plus.svg" alt="show answer" aria-hidden="true"/>
+            <img class="hide" src="assets/images/icon-minus.svg" alt="hide answer" aria-hidden="true"/>
+          </button>
+
+        <div id="answer-4" class="answer">
+          The best place to get help is inside Frontend Mentor's Discord
+          community. There's a help channel where you can ask questions and seek
+          support from other community members.
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <script src="script.js"></script>
+    <noscript>
+      <!-- show all content if no js -->
+      <style>
+        [data-state='no-js'] .answer{
+          display: block;
+        }
+      </style>
+    </noscript>
+  </body>
+</html>

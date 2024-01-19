@@ -1,6 +1,6 @@
 ## FAQ Accordion Improved.
 Some improvements I have made are:
-- Styled it such that when javascript is not loaded the answer isn't displayed.
+* Styled it such that when javascript is not loaded the answer isn't displayed.
 
 ```<style>
       [data-state='no-js'] .answer{
@@ -8,9 +8,10 @@ Some improvements I have made are:
       }
     </style>```
 
-- Imrpoved accessibility with `ARIA`.
+* Imrpoved accessibility with `ARIA`.
 
-- Added a `noscript`.
+* Added a `noscript`.
+
 ```<noscript>
       <!-- show all content if no js -->
       <style>
@@ -20,12 +21,13 @@ Some improvements I have made are:
       </style>
     </noscript>```
 
-- Used `aria-expanded` attributes to hide and display the answer and change the icon at the same time. The function below is called on clicking the question which changes the `aria-expanded` value and the style is applied accordingly.
+
+* Used `aria-expanded` attributes to hide and display the answer and change the icon at the same time. The function below is called on clicking the question which changes the `aria-expanded` value and the style is applied accordingly.
+
 ```function toggleDisclosure(){
     const isExpanded= this.getAttribute('aria-expanded')==='true';
     this.setAttribute('aria-expanded', !isExpanded);
 }```
-
 
 ``` .disclosure_button[aria-expanded="true"] .show {
         display: none;
